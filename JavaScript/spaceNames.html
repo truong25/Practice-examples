@@ -19,18 +19,20 @@ var moonWalkers = [
 function alphabetizer(names) {
     // Your code goes here!
 	var tempNames = [];
+	// Split up the names by separating them at the " " 
 	for (i = 0; i < names.length; i++){
-		
 		tempNames.push(names[i].split(" "));
 	}
-	    for (j = 0; j < tempNames.length; j++) {
-        var temp = tempNames[j][0];
-        tempNames[j][0] = tempNames[j][1];
-        tempNames[j][1] = temp;
-        tempNames[j] = tempNames[j].join(", ");
-    }
-    tempNames.sort();
-    return tempNames;
+	// Rearrange the array so that it displays as: lastName, firstName
+	for (j = 0; j < tempNames.length; j++) {
+       		var temp = tempNames[j][0];
+       		tempNames[j][0] = tempNames[j][1];
+       		tempNames[j][1] = temp;
+      		tempNames[j] = tempNames[j].join(", ");
+   	}
+	// Sort it by alphabetical order
+	tempNames.sort();
+   	return tempNames;
 }
 
 // Try logging your results to test your code!
