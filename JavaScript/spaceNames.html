@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <script>
+var moonWalkers = [
+  "Neil Armstrong",
+  "Buzz Aldrin",
+  "Pete Conrad",
+  "Alan Bean",
+  "Alan Shepard",
+  "Edgar Mitchell",
+  "David Scott",
+  "James Irwin",
+  "John Young",
+  "Charles Duke",
+  "Eugene Cernan",
+  "Harrison Schmitt"
+];
+
+function alphabetizer(names) {
+    // Your code goes here!
+	var tempNames = [];
+	for (i = 0; i < names.length; i++){
+		
+		tempNames.push(names[i].split(" "));
+	}
+	    for (j = 0; j < tempNames.length; j++) {
+        var temp = tempNames[j][0];
+        tempNames[j][0] = tempNames[j][1];
+        tempNames[j][1] = temp;
+        tempNames[j] = tempNames[j].join(", ");
+    }
+    tempNames.sort();
+    return tempNames;
+}
+
+// Try logging your results to test your code!
+console.log(alphabetizer(moonWalkers));
+
+ </script>
+ 
+ </html>
